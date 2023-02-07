@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String s[]) {
+        Scanner sc= new Scanner(System.in);
+        String str= sc.nextLine();
+        System.out.println(removeDuplicate(str)); 
+    }
+    public static String removeDuplicate(String str){
+        String newStr="";
+        for(int i=0;i<str.length();i++){
+            char ch=str.charAt(i);
+            if(newStr.indexOf(ch)==-1){
+                newStr+=ch;
+            }
+        }
+        return newStr;
+    }
+}
